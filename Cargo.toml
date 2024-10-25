@@ -1,6 +1,11 @@
 [package]
-name = "wululu"
-version = "0.1.0"
+name = "zz_rust_web_template"
+version = "0.0.1"
 edition = "2021"
 
 [dependencies]
+actix-web = "4.9.0"
+tokio = { version = "1.41.0", features = ["macros", "rt-multi-thread"]}
+
+[dev-dependencies]
+reqwest = "0.12.8"

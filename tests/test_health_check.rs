@@ -1,7 +1,6 @@
 use reqwest;
 use tokio;
 
-
 #[tokio::test]
 async fn health_check_return_200_and_no_content() {
     spawn_app();

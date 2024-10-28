@@ -8,7 +8,7 @@ async fn health_check_return_200_and_no_content() {
     let client = reqwest::Client::new();
 
     let response = client
-        .get(format!("{}/health_check", address))
+        .get(&format!("{}/health_check", address))
         .send()
         .await
         .expect("Failed to execute request.");

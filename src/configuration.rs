@@ -12,3 +12,15 @@ pub fn get_configuration() -> Result<Settings, config::ConfigError> {
         .build()?;
     settings.try_deserialize::<Settings>()
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn get_configuration_should_success() {
+        let configuration = get_configuration();
+        assert!(configuration.is_ok())
+    }
+}

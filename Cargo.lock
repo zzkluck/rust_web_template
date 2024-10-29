@@ -2281,5 +2281,6 @@ dependencies = [
  "config",
  "reqwest",
  "serde",
+ "serde_json",
  "tokio",
 ]

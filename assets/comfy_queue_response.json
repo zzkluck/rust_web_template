@@ -1,0 +1,278 @@
+{
+  "queue_running": [
+    [
+      0,
+      "098ac3a7-a2d2-4dc6-b562-fbd51191c4f6",
+      {
+        "10": {
+          "inputs": {
+            "task_time": 600
+          },
+          "class_type": "🐛comfyFoam|LongTask",
+          "_meta": {
+            "title": "长时间任务模拟"
+          }
+        }
+      },
+      {
+        "extra_pnginfo": {
+          "workflow": {
+            "last_node_id": 10,
+            "last_link_id": 9,
+            "nodes": [
+              {
+                "id": 10,
+                "type": "🐛comfyFoam|LongTask",
+                "pos": {
+                  "0": 803,
+                  "1": 287
+                },
+                "size": {
+                  "0": 315,
+                  "1": 58
+                },
+                "flags": {},
+                "order": 0,
+                "mode": 0,
+                "inputs": [],
+                "outputs": [],
+                "properties": {
+                  "Node name for S&R": "🐛comfyFoam|LongTask"
+                },
+                "widgets_values": [
+                  600
+                ]
+              }
+            ],
+            "links": [],
+            "groups": [],
+            "config": {},
+            "extra": {
+              "workspace_info": {
+                "id": "j-YZQ85QsGAEeG0LpI4aB"
+              },
+              "ds": {
+                "scale": 1.2284597357367277,
+                "offset": [
+                  -557.7204589894963,
+                  -128.4485073663102
+                ]
+              }
+            },
+            "version": 0.4
+          }
+        },
+        "client_id": "de867a7691584fc58194871d06aa7aa9"
+      },
+      [
+        "10"
+      ]
+    ]
+  ],
+  "queue_pending": [
+    [
+      1,
+      "f2ae9e43-bcf8-4408-a16a-ccf993e8ae68",
+      {
+        "10": {
+          "inputs": {
+            "task_time": 2583
+          },
+          "class_type": "🐛comfyFoam|LongTask",
+          "_meta": {
+            "title": "长时间任务模拟"
+          }
+        }
+      },
+      {
+        "extra_pnginfo": {
+          "workflow": {
+            "last_node_id": 10,
+            "last_link_id": 9,
+            "nodes": [
+              {
+                "id": 10,
+                "type": "🐛comfyFoam|LongTask",
+                "pos": {
+                  "0": 803,
+                  "1": 287
+                },
+                "size": {
+                  "0": 315,
+                  "1": 58
+                },
+                "flags": {},
+                "order": 0,
+                "mode": 0,
+                "inputs": [],
+                "outputs": [],
+                "properties": {
+                  "Node name for S&R": "🐛comfyFoam|LongTask"
+                },
+                "widgets_values": [
+                  2583
+                ]
+              }
+            ],
+            "links": [],
+            "groups": [],
+            "config": {},
+            "extra": {
+              "workspace_info": {
+                "id": "j-YZQ85QsGAEeG0LpI4aB"
+              },
+              "ds": {
+                "scale": 1.2284597357367277,
+                "offset": [
+                  -557.7204589894963,
+                  -128.4485073663102
+                ]
+              }
+            },
+            "version": 0.4
+          }
+        },
+        "client_id": "de867a7691584fc58194871d06aa7aa9"
+      },
+      [
+        "10"
+      ]
+    ],
+    [
+      2,
+      "459ef627-3af1-49a3-b527-ad37e4251626",
+      {
+        "10": {
+          "inputs": {
+            "task_time": 175
+          },
+          "class_type": "🐛comfyFoam|LongTask",
+          "_meta": {
+            "title": "长时间任务模拟"
+          }
+        }
+      },
+      {
+        "extra_pnginfo": {
+          "workflow": {
+            "last_node_id": 10,
+            "last_link_id": 9,
+            "nodes": [
+              {
+                "id": 10,
+                "type": "🐛comfyFoam|LongTask",
+                "pos": {
+                  "0": 803,
+                  "1": 287
+                },
+                "size": {
+                  "0": 315,
+                  "1": 58
+                },
+                "flags": {},
+                "order": 0,
+                "mode": 0,
+                "inputs": [],
+                "outputs": [],
+                "properties": {
+                  "Node name for S&R": "🐛comfyFoam|LongTask"
+                },
+                "widgets_values": [
+                  175
+                ]
+              }
+            ],
+            "links": [],
+            "groups": [],
+            "config": {},
+            "extra": {
+              "workspace_info": {
+                "id": "j-YZQ85QsGAEeG0LpI4aB"
+              },
+              "ds": {
+                "scale": 1.2284597357367277,
+                "offset": [
+                  -557.7204589894963,
+                  -128.4485073663102
+                ]
+              }
+            },
+            "version": 0.4
+          }
+        },
+        "client_id": "de867a7691584fc58194871d06aa7aa9"
+      },
+      [
+        "10"
+      ]
+    ],
+    [
+      3,
+      "b71ff4ba-073b-4e6c-ae73-5efd851cbb0b",
+      {
+        "10": {
+          "inputs": {
+            "task_time": 332
+          },
+          "class_type": "🐛comfyFoam|LongTask",
+          "_meta": {
+            "title": "长时间任务模拟"
+          }
+        }
+      },
+      {
+        "extra_pnginfo": {
+          "workflow": {
+            "last_node_id": 10,
+            "last_link_id": 9,
+            "nodes": [
+              {
+                "id": 10,
+                "type": "🐛comfyFoam|LongTask",
+                "pos": {
+                  "0": 803,
+                  "1": 287
+                },
+                "size": {
+                  "0": 315,
+                  "1": 58
+                },
+                "flags": {},
+                "order": 0,
+                "mode": 0,
+                "inputs": [],
+                "outputs": [],
+                "properties": {
+                  "Node name for S&R": "🐛comfyFoam|LongTask"
+                },
+                "widgets_values": [
+                  332
+                ]
+              }
+            ],
+            "links": [],
+            "groups": [],
+            "config": {},
+            "extra": {
+              "workspace_info": {
+                "id": "j-YZQ85QsGAEeG0LpI4aB"
+              },
+              "ds": {
+                "scale": 1.2284597357367277,
+                "offset": [
+                  -557.7204589894963,
+                  -128.4485073663102
+                ]
+              }
+            },
+            "version": 0.4
+          }
+        },
+        "client_id": "de867a7691584fc58194871d06aa7aa9"
+      },
+      [
+        "10"
+      ]
+    ]
+  ]
+}

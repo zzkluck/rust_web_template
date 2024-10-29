@@ -1,5 +1,6 @@
 use reqwest;
 use tokio;
+use zz_rust_web_template::configuration::get_configuration;
 
 #[tokio::test]
 async fn health_check_return_200_and_no_content() {
@@ -19,8 +20,9 @@ async fn health_check_return_200_and_no_content() {
 
 fn spawn_app() -> String {
     let listener = std::net::TcpListener::bind("127.0.0.1:0").expect("Failed to bind random port.");
+    let config = get_configuration().expect("Failed to parse config.");
     let port = listener.local_addr().unwrap().port();
-    let server = zz_rust_web_template::startup::run(listener).expect("Failed to bind address.");
+    let server = zz_rust_web_template::startup::run(listener, config).expect("Failed to bind address.");
     let _ = tokio::spawn(server);
 
     format!("http://127.0.0.1:{}", port)

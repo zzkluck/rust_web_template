@@ -1,0 +1,8 @@
+application_port: 8000
+comfy_address: "http://localhost:8188"
+database:
+  host: "zzpi.local"
+  port: 42004
+  username: "root"
+  password: "password"
+  database_name: "sheet"

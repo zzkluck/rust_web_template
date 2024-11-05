@@ -1,0 +1,264 @@
+{
+  "client_id": "anonymous",
+  "prompt": {
+    "29": {
+      "inputs": {
+        "polymesh_path": "/opt/openfoam11/tutorials/incompressibleFluid/airFoil2D/constant/polyMesh"
+      },
+      "class_type": "🐛comfyFoam|Mesh|ImportFromPolyMesh",
+      "_meta": {
+        "title": "Import A Mesh From PolyMeshDir"
+      }
+    },
+    "31": {
+      "inputs": {
+        "fv_solver_name": "smoothSolver",
+        "preconditioner": "none",
+        "smoother": "symGaussSeidel",
+        "tolerance": "1e-5",
+        "rel_tol": 0.1,
+        "max_iter": 100,
+        "n_sweeps": 1,
+        "residual_control": "1e-3",
+        "fields_relaxation": 1,
+        "equations_relaxation": 0.9
+      },
+      "class_type": "🐛comfyFoam|QuantitySolver",
+      "_meta": {
+        "title": "🛫"
+      }
+    },
+    "34": {
+      "inputs": {
+        "fv_solver_name": "GAMG",
+        "preconditioner": "none",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-6",
+        "rel_tol": 0.1,
+        "max_iter": 100,
+        "n_sweeps": 1,
+        "residual_control": "1e-2",
+        "fields_relaxation": 1,
+        "equations_relaxation": 0.9
+      },
+      "class_type": "🐛comfyFoam|QuantitySolver",
+      "_meta": {
+        "title": "🛫物理量求解器"
+      }
+    },
+    "42": {
+      "inputs": {
+        "interpolation_scheme": "linear",
+        "sn_grad_scheme": "corrected",
+        "gradient_scheme": "Gauss linear",
+        "gradient_scheme_limit": "None",
+        "laplacian_interpolation_scheme": "linear",
+        "laplacian_sngrad_scheme": "corrected",
+        "divergence_interpolation_scheme": "linear",
+        "ddt_scheme": "steadyState"
+      },
+      "class_type": "🐛comfyFoam|Discrete|DefaultDiscreteSetter",
+      "_meta": {
+        "title": "🛫默认离散算法配置器"
+      }
+    },
+    "49": {
+      "inputs": {
+        "fv_scheme_name": "divSchemes",
+        "fv_scheme_target": "div(phi,U)",
+        "fv_scheme_type": "bounded Gauss linearUpwind grad(U)",
+        "🍐离散算法": [
+          "42",
+          0
+        ]
+      },
+      "class_type": "🐛comfyFoam|Discrete|FvSchemeCommon",
+      "_meta": {
+        "title": "🛫通用离散配置器div_phi_U"
+      }
+    },
+    "50": {
+      "inputs": {
+        "nu": "1e-5",
+        "🔬k属性": [
+          "62",
+          0
+        ],
+        "🔬ε属性": [
+          "62",
+          0
+        ]
+      },
+      "class_type": "🐛comfyFoam|Case|KEpsilonTransport",
+      "_meta": {
+        "title": "🛫k-ε湍流模型"
+      }
+    },
+    "53": {
+      "inputs": {
+        "coupled_algorithm": "SIMPLE",
+        "consistent": "yes",
+        "nCorrectors": 1,
+        "nNonOrthogonalCorrectors": 0,
+        "pRefCell": 0,
+        "pRefValue": 0
+      },
+      "class_type": "🐛comfyFoam|DictEntry|SimpleOrPimple",
+      "_meta": {
+        "title": "🛫XIMPLE压力速度耦合"
+      }
+    },
+    "54": {
+      "inputs": {
+        "fv_scheme_name": "divSchemes",
+        "fv_scheme_target": "div(phi,k)",
+        "fv_scheme_type": "bounded Gauss limitedLinear 1",
+        "🍐离散算法": [
+          "49",
+          0
+        ]
+      },
+      "class_type": "🐛comfyFoam|Discrete|FvSchemeCommon",
+      "_meta": {
+        "title": "🛫通用离散配置器_div_phi_k"
+      }
+    },
+    "55": {
+      "inputs": {
+        "fv_scheme_name": "divSchemes",
+        "fv_scheme_target": "div(phi,epsilon)",
+        "fv_scheme_type": "bounded Gauss limitedLinear 1",
+        "🍐离散算法": [
+          "54",
+          0
+        ]
+      },
+      "class_type": "🐛comfyFoam|Discrete|FvSchemeCommon",
+      "_meta": {
+        "title": "🛫通用离散配置器_div_phi_epsilon"
+      }
+    },
+    "56": {
+      "inputs": {
+        "viscosity_model": "constant",
+        "nu": "0.01"
+      },
+      "class_type": "🐛comfyFoam|Case|LaminarTransport",
+      "_meta": {
+        "title": "🛫层流模型"
+      }
+    },
+    "58": {
+      "inputs": {
+        "💨压力属性": [
+          "60",
+          0
+        ],
+        "🚅速度属性": [
+          "62",
+          0
+        ],
+        "🧑‍🤝‍🧑耦合算法": [
+          "53",
+          0
+        ],
+        "🍐离散算法": [
+          "55",
+          0
+        ],
+        "🚚运输模型": [
+          "56",
+          0
+        ]
+      },
+      "class_type": "🐛comfyFoam|Case|MakeCase",
+      "_meta": {
+        "title": "🛫构建算例"
+      }
+    },
+    "60": {
+      "inputs": {
+        "💻数值求解器": [
+          "34",
+          0
+        ]
+      },
+      "class_type": "🐛comfyFoam|QuantityProperty",
+      "_meta": {
+        "title": "🛫物理量属性"
+      }
+    },
+    "62": {
+      "inputs": {
+        "💻数值求解器": [
+          "31",
+          0
+        ]
+      },
+      "class_type": "🐛comfyFoam|QuantityProperty",
+      "_meta": {
+        "title": "🛫物理量属性U"
+      }
+    },
+    "63": {
+      "inputs": {
+        "inlet_velocity": "uniform (10 0 0)"
+      },
+      "class_type": "🐛comfyFoam|Field|VelocityInlet",
+      "_meta": {
+        "title": "🛫速度入口条件"
+      }
+    },
+    "64": {
+      "inputs": {
+        "solver": "incompressibleFluid",
+        "n_step": 50,
+        "delta_t": 0.05,
+        "write_interval": 20,
+        "purgeWrite": 0,
+        "🕸️网格": [
+          "29",
+          0
+        ],
+        "📋求解配置": [
+          "58",
+          0
+        ],
+        "💡边界条件": [
+          "63",
+          0
+        ]
+      },
+      "class_type": "🐛comfyFoam|FoamRunner",
+      "_meta": {
+        "title": "🛫以OpenFoam运行算例"
+      }
+    },
+    "65": {
+      "inputs": {
+        "📊计算结果": [
+          "64",
+          0
+        ]
+      },
+      "class_type": "🐛comfyFoam|Foam2VTK",
+      "_meta": {
+        "title": "🛫将最新算例转化为VTK格式"
+      }
+    },
+    "66": {
+      "inputs": {
+        "bucket": "ComfyUIResult",
+        "name": "default.obj",
+        "📄文件": [
+          "65",
+          0
+        ]
+      },
+      "class_type": "🐛comfyFoam|Upload2Minio",
+      "_meta": {
+        "title": "🛫将文件上传至Minio"
+      }
+    }
+  }
+}

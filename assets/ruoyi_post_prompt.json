@@ -1,0 +1,19 @@
+{
+  "workflow_id": "1",
+  "task_name": "post_prompt_task_001",
+  "client_id": "ruoyi",
+  "args": {
+    "🛫物理量求解器": {
+      "fv_solver_name": "smoothSolver",
+      "preconditioner": "none",
+      "smoother": "symGaussSeidel"
+    },
+    "🛫以OpenFoam运行算例": {
+      "solver": "incompressibleFluid",
+      "n_step": "50",
+      "delta_t": "0.05",
+      "write_interval": "20",
+      "purgeWrite": "0"
+    }
+  }
+}

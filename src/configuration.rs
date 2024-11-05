@@ -33,7 +33,6 @@ pub fn get_configuration() -> Result<Settings, config::ConfigError> {
     settings.try_deserialize::<Settings>()
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;

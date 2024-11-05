@@ -1,5 +1,7 @@
-pub mod configuration;
-mod routes;
-pub mod startup;
 pub mod comfy_client;
-mod domain;
+pub mod configuration;
+pub mod domain;
+pub mod startup;
+mod routes;
+
+pub use routes::ExistResponse;

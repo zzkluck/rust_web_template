@@ -3,7 +3,7 @@ use sqlx::MySqlPool;
 use tokio;
 use zz_rust_web_template::comfy_client::ComfyClient;
 use zz_rust_web_template::configuration::get_configuration;
-use zz_rust_web_template::domain::ruoyi_prompt_request::RuoyiPromptRequest;
+use zz_rust_web_template::domain::RuoyiPromptRequest;
 use zz_rust_web_template::startup::run;
 use zz_rust_web_template::ExistResponse;
 

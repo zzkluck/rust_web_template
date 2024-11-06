@@ -52,7 +52,7 @@ mod tests {
 
         let input = inputs
             .iter()
-            .find(|i| i.node_title == "求解控制器器" && i.key == "solver")
+            .find(|i| i.node_title == "🛫以OpenFoam运行算例" && i.key == "solver")
             .expect("Failed to find expected input.");
 
         assert_eq!(input.value, "incompressibleFluid");

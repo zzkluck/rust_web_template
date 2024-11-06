@@ -36,7 +36,7 @@ impl ComfyQueueResponse {
     pub fn owned_prompts(self) -> Vec<String> {
         self.running
             .into_iter()
-            .chain(self.pending.into_iter())
+            .chain(self.pending)
             .map(|x| x.prompt_id)
             .collect()
     }
@@ -44,13 +44,13 @@ impl ComfyQueueResponse {
 
 fn _parse_response_array(json: &Value, queue_name: &str) -> Vec<ComfyQueueInfo> {
     json.get(queue_name)
-        .expect(&format!("<{}> not in json object.", queue_name))
+        .unwrap_or_else(|| panic!("<{}> not in json object.", queue_name))
         .as_array()
-        .expect(&format!("<{}> is not an array.", queue_name))
+        .unwrap_or_else(|| panic!("<{}> is not an array.", queue_name))
         .iter()
         .map(|x| {
             if x.as_array()
-                .expect(&format!("Obj {:?} in {} is not an array.", x, queue_name))
+                .unwrap_or_else(|| panic!("Obj {:?} in {} is not an array.", x, queue_name))
                 .len()
                 != 5
             {

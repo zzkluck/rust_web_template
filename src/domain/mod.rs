@@ -1,6 +1,7 @@
 mod comfy_queue_response;
-pub mod ruoyi_prompt_request;
-pub mod workflow;
+mod ruoyi_prompt_request;
+mod workflow;
 
 pub use comfy_queue_response::*;
-// pub use prompt::*;
+pub use ruoyi_prompt_request::*;
+pub use workflow::*;

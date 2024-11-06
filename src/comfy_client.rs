@@ -1,4 +1,4 @@
-use crate::domain::workflow::Workflow;
+use crate::domain::Workflow;
 use reqwest::Client;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;

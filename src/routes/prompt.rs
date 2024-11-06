@@ -1,6 +1,6 @@
 use crate::comfy_client::ComfyClient;
-use crate::domain::ruoyi_prompt_request::RuoyiPromptRequest;
-use crate::domain::workflow::Workflow;
+use crate::domain::RuoyiPromptRequest;
+use crate::domain::Workflow;
 use actix_web::{web, HttpResponse, Responder};
 use chrono::Utc;
 use sqlx::MySqlPool;
